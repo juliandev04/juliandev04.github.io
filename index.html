@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+    <header>
+        <nav class="menu__nav">
+            <div class="menu__img"></div>
+            <label class="material-symbols-outlined" for="checkbox__menu" id="signo">menu</label>
+            <input type="checkbox" id="checkbox__menu">
+
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#main">
+                        <span class="material-symbols-outlined">home</span>
+                        Home
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#about">
+                        <span class="material-symbols-outlined">person</span>
+                        About Me
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#services">
+                        <span class="material-symbols-outlined">work</span>
+                        Services
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#skills">
+                        <span class="material-symbols-outlined">verified</span>
+                        Skills
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#portfolio">
+                        <span class="material-symbols-outlined">folder_open</span>
+                        Portfolio
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#contact">
+                        <span class="material-symbols-outlined">mail</span>
+                        Contact me
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main__div">
+            <div class="main__container">
+                <div class="main__description">
+                    <div class="main__img"></div>
+                    <h1>Julian Developer</h1>
+                    <p class="main__text">Soy un creativo y divertido Full Stack Developer</p>
+                    <p class="main__text">(esta web es Responsive)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="about__section" id="about">
+        <div class="about__container">
+            <div class="about__target">
+                <div class="target__container">
+                    <div class="target__img"></div>
+                    <div class="target__description">
+                        <h2>Full Stack Boy</h2>
+                        <p>Developer Full Stack</p>
+                    </div>
+                    <div class="target__redes">
+                        <a href="https://www.instagram.com/julian_developer04/" class="redes__img red-fb" target="_blank"></a>
+                        <a href="https://www.instagram.com/julian_developer04/" class="redes__img red-ig" target="_blank"></a>
+                        <a href="https://www.instagram.com/julian_developer04/" class="redes__img red-linkedin" target="_blank"></a>
+                        <a href="https://www.instagram.com/julian_developer04/" class="redes__img red-tiktok" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="about__description">
+                <div class="description__container">
+                    <h3>Personal Details</h3>
+                    <div class="personal--details">
+                        <div class="detail"><h5>Birthday:</h5> <span>2002</span></div>
+                        <div class="detail"><h5>Phone:</h5> <span>+51 961409439</span></div>
+                        <div class="detail"><h5>Email:</h5> <span>juliandiv04@outlook.es</span></div>
+                        <div class="detail"><h5>Address:</h5> <span>26, Piura, Perú</span></div>
+                        <div class="detail"><h5>Job Status:</h5> <span class="freel">Freelancer de noche y chambeador</span></div>
+                    </div>
+                    <h3>My Interests</h3>
+                    <div class="container__interests">
+                        <div class="grid__interest grid--1"></div>
+                        <div class="grid__interest grid--2"></div>
+                        <div class="grid__interest grid--3"></div>
+                        <div class="grid__interest grid--4"></div>
+                        <div class="grid__interest grid--5"></div>
+                        <div class="grid__interest grid--6"></div>
+                        <div class="grid__interest grid--7"></div>
+                        <div class="grid__interest grid--8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services__section" id="services">
+        <h2>My Services</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="service__target">
+                        <div class="service__img service--1"></div>
+                        <h2>Web Development</h2>
+                        <p>Sitios web personalizados, adaptados a las necesidades del cliente, optimizados y adaptables a todos los dispositivos.</p>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="service__target">
+                        <div class="service__img service--2"></div>
+                        <h2>Frontend Development</h2>
+                        <p>Creación de interfaces interactivas y fáciles de usar utilizando las últimas tecnologías como React, Vue o JavaScript.</p>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="service__target">
+                        <div class="service__img service--3"></div>
+                        <h2>UI/UX</h2>
+                        <p>Tengo poca creatividad pero creo que estoy mejorando.</p>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="service__target">
+                        <div class="service__img service--4"></div>
+                        <h2>API Integration</h2>
+                        <p>Aplicaciones conectadas a servicios de terceros, garantizando una comunicación fluida entre sistemas.</p>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="service__target">
+                        <div class="service__img service--5"></div>
+                        <h2>Backend Development</h2>
+                        <p>Construcción de soluciones del lado del servidor escalables utilizando Node.js y bases de datos como MongoDB o MySQL.</p>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="service__target">
+                        <div class="service__img service--6"></div>
+                        <h2>Maintenance & Support</h2>
+                        <p>Monitoreo continuo, actualizaciones y resolución de problemas para sitios web y aplicaciones web.</p>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide">
+                    <div class="service__target">
+                        <div class="service__img service--7"></div>
+                        <h2>Consulting & Strategy</h2>
+                        <p>Proporcionamos información técnica y asesoramiento para elegir las herramientas y tecnologías adecuadas para sus objetivos comerciales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>     
+    </section>
+    <section class="skills__section" id="skills">
+        <div class="skills__container">
+            <div class="card__container">
+                <div class="card">
+                    <div class="card__front">
+                        <img src="img/skills/html.jpg" alt="">
+                        <div class="card__data">
+                            <span>HTML</span>
+                            <p class="card__text">La estructura de la web: construyo castillos en el aire con etiquetas, no solo sé usar div</p>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="skill-bar skill-html">
+                            <div>Conocimientos</div>
+                        </div>
+                        <div class="circle html-circle">
+                            <div class="circle-inner">
+                                <span class="percentage">95%</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__front">
+                        <img src="img/skills/css.jpg" alt="">
+                        <div class="card__data">
+                            <span>CSS</span>
+                            <p class="card__text">Doy color a lo gris: con queries puedo adaptarme a cualquier teléfono, tablet o monitor gigante.</p>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="skill-bar skill-css">
+                            <div>Conocimientos</div>
+                        </div>
+                        <div class="circle css-circle">
+                            <div class="circle-inner">
+                                <span class="percentage">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__front">
+                        <img src="img/skills/js.png" alt="">
+                        <div class="card__data">
+                            <span>JAVASCRIPT</span>
+                            <p class="card__text">El lenguaje donde todo es un objeto, pero hace que todo cobre vida</p>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="skill-bar skill-js">
+                            <div>Conocimientos</div>
+                        </div>
+                        <div class="circle js-circle">
+                            <div class="circle-inner">
+                                <span class="percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card__container">
+                <div class="card">
+                    <div class="card__front">
+                        <img src="img/skills/react.png" alt="">
+                        <div class="card__data">
+                            <span>REACT</span>
+                            <p class="card__text">El framework de los componentes. Su sistema de gesión de estado permite aplicaciones modulares</p>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="skill-bar skill-react">
+                            <div>Conocimientos</div>
+                        </div>
+                        <div class="circle react-circle">
+                            <div class="circle-inner">
+                                <span class="percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front">
+                        <img src="img/skills/NODE.png" alt="">
+                        <div class="card__data">
+                            <span>NODEJS</span>
+                            <p class="card__text">El servidor que nunca duerme: llevandonos al lado oscuro... el backend.</p>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="skill-bar skill-node">
+                            <div>Conocimientos</div>
+                        </div>
+                        <div class="circle node-circle">
+                            <div class="circle-inner">
+                                <span class="percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front">
+                        <img src="img/skills/bd.jpg" alt="">
+                        <div class="card__data">
+                            <span>DATABASE</span>
+                            <p class="card__text">Las bases de datos son como armarios... pero con datos.</p>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="skill-bar skill-bd">
+                            <div>Conocimientos</div>
+                        </div>
+                        <div class="circle bd-circle">
+                            <div class="circle-inner">
+                                <span class="percentage">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+        </div>
+    </section>
+    <section class="portfolio__section" id="portfolio">
+        <h2 class="portfolio__title">PROJECTS SECTION</h2>
+        <div class="portfolio__container">
+            <div class="portfolio__project" id="tienda__project">
+                <div class="portfolio__project-name">TIENDA ONLINE</div>
+            </div>
+            <div class="portfolio__project" id="ahorcado__project">
+                <div class="portfolio__project-name">JUEGO DEL AHORCADO</div>
+            </div>
+            <div class="portfolio__project" id="collage__project">
+                <div class="portfolio__project-name">COLLAGE DE FOTOS</div>
+            </div>
+            <div class="portfolio__project" id="reproductor__project">
+                <div class="portfolio__project-name">REPRODUCTOR MUSICAL</div>
+            </div>
+            <div class="portfolio__project" id="videojuego__project">
+                <div class="portfolio__project-name">VIDEOJUEGO</div>
+            </div>
+            <div class="portfolio__project" id="hoja__project">
+                <div class="portfolio__project-name">HOJA DE CALCULO</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact__section" id="contact">
+        <h2 class="contact__title">CONTACT</h2>
+        <form class="contact__form">
+            <div class="form__input-container">
+                <label>Nombre
+                    <input type="text" placeholder="John">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Apellido
+                    <input type="text" placeholder="Doe">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Mail
+                    <input type="email" placeholder="yourmail@example.com">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Mensaje
+                    <textarea placeholder="Your Message"></textarea>
+                </label>
+            </div>
+            <div class="form__input-container">
+               <input type="submit" id="submit_button">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <strong>JULIANDEVELOPER</strong> © Copyright
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pedido</title>
+    <link rel="stylesheet" href="stylesForm.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FORMULARIO DE PEDIDO</h1>
+
+        <!-- Información del cliente -->
+        <form id="order-form" action="/procesar-pedido" method="POST">
+
+            <!-- Información de contacto -->
+            <section class="section">
+                <h2>Información de Contacto</h2>
+                <label for="name" class="label">Nombre completo</label>
+                <input type="text" id="name" name="name" class="input" placeholder="Ingresa tu nombre" required>
+
+                <label for="email" class="label">Correo electrónico</label>
+                <input type="email" id="email" name="email" class="input" placeholder="ejemplo@correo.com" required>
+
+                <label for="phone" class="label">Número de teléfono</label>
+                <input type="tel" id="phone" name="phone" class="input" placeholder="(+34) 600 000 000" required>
+            </section>
+
+            <!-- Dirección de envío -->
+            <section class="section">
+                <h2>Dirección de Envío</h2>
+                <label for="address" class="label">Dirección completa</label>
+                <input type="text" id="address" name="address" class="input" placeholder="Calle, Número, Piso" required>
+
+                <label for="city" class="label">Ciudad</label>
+                <input type="text" id="city" name="city" class="input" placeholder="Ciudad" required>
+
+                <label for="postal-code" class="label">Código Postal</label>
+                <input type="text" id="postal-code" name="postal-code" class="input" placeholder="Código Postal" required>
+
+                <label for="province" class="label">Provincia/Región</label>
+                <input type="text" id="province" name="province" class="input" placeholder="Provincia/Región" required>
+
+                <label for="country" class="label">País</label>
+                <select id="country" name="country" class="input" required>
+                    <option value="Péru">Perú</option>
+                    <option value="España">España</option>
+                    <option value="México">México</option>
+                    <option value="Argentina">Argentina</option>
+                    <!-- Agrega más países según sea necesario -->
+                </select>
+
+                <label for="shipping-instructions" class="label">Instrucciones adicionales de envío</label>
+                <textarea id="shipping-instructions" name="shipping-instructions" class="input" placeholder="Por ejemplo: Dejar el paquete en la puerta"></textarea>
+            </section>
+
+            <!-- Resumen del pedido -->
+            <section class="section">
+                <h2>Resumen del Pedido</h2>
+                <div id="order-summary">
+                    <!-- Aquí se agregarán dinámicamente los productos -->
+                    <ul id="product-list">
+                        <li class="product-item">
+                            <span class="product-name">Producto 1</span>
+                            <input type="number" class="product-quantity" value="1" min="1" max="10">
+                            <div class="product-img"></div>
+                        </li>
+                    </ul>                    
+
+                    <div class="summary-item">
+                        <strong>Subtotal:</strong> <span id="subtotal">S/20.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Impuestos:</strong> <span id="tax">S/2.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Costo de Envío:</strong> <span id="shipping-cost">s/4.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <strong>Total:</strong> <span id="total">S/27.00</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Métodos de envío -->
+            <section class="section">
+                <h2>Método de Envío</h2>
+                <label for="shipping-method" class="label">Selecciona tu opción de envío</label>
+                <select id="shipping-method" name="shipping-method" class="input" required>
+                    <option value="standard">Envío Estándar (3-5 días hábiles)</option>
+                    <option value="express">Envío Exprés (1-2 días hábiles)</option>
+                </select>
+            </section>
+
+            <!-- Método de pago -->
+            <section class="section">
+                <h2>Método de Pago</h2>
+                <label for="payment-method" class="label">Selecciona tu método de pago</label>
+                <select id="payment-method" name="payment-method" class="input" required>
+                    <option value="credit-card">Tarjeta de Crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Transferencia Bancaria</option>
+                </select>
+
+                <!-- Si el método de pago es tarjeta -->
+                <div id="credit-card-info" class="payment-info">
+                    <label for="card-number" class="label">Número de tarjeta</label>
+                    <input type="text" id="card-number" name="card-number" class="input" placeholder="1234 5678 9012 3456" required>
+
+                    <label for="expiry-date" class="label">Fecha de vencimiento</label>
+                    <input type="text" id="expiry-date" name="expiry-date" class="input" placeholder="MM/AA" required>
+
+                    <label for="cvv" class="label">CVV</label>
+                    <input type="text" id="cvv" name="cvv" class="input" placeholder="123" required>
+                </div>
+            </section>
+
+            <!-- Comentarios adicionales -->
+            <section class="section">
+                <label for="order-comments" class="label">Comentarios adicionales</label>
+                <textarea id="order-comments" name="order-comments" class="input" placeholder="Cualquier detalle adicional sobre tu pedido"></textarea>
+            </section>
+
+            <!-- Aceptación de términos -->
+            <section class="section">
+                <label for="terms" class="checkbox-label">
+                    <input type="checkbox" id="terms" name="terms" class="checkbox" required>
+                    Acepto los &nbsp<a href="/terminos-y-condiciones" target="_blank">términos y condiciones</a>
+                </label>
+            </section>
+
+            <!-- Botón de confirmación -->
+            <button type="submit" id="submit-button" class="submit-button">Finalizar Pedido</button>
+        </form>
+    </div>
+    <script>
+        const producto = JSON.parse(localStorage.getItem('productoSeleccionado'));
+
+        if (producto) {
+            document.querySelector('.product-img').style.backgroundImage = `url(${producto.img})`;
+            document.querySelector('.product-name').textContent = producto.nombre;
+
+            // Convertir el precio a número
+            const precio = parseFloat(producto.precio.replace('S/', '').replace(',', '.'));
+
+            // Actualizar subtotal
+            const subtotalElement = document.querySelector('#subtotal');
+            subtotalElement.textContent = `S/${precio.toFixed(2)}`;
+
+            // Función para calcular el total
+            function calcularTotal() {
+                const cantidad = parseInt(document.querySelector('.product-quantity').value);
+                const metodoEnvio = document.querySelector('#shipping-method').value;
+                
+                // Calcular subtotal basado en la cantidad
+                const subtotal = precio * cantidad;
+                subtotalElement.textContent = `S/${subtotal.toFixed(2)}`;
+
+                // Calcular impuestos
+                const impuestos = subtotal * 0.18; // 18%
+                document.querySelector('#tax').textContent = `S/${impuestos.toFixed(2)}`;
+
+                // Calcular costo de envío
+                let costoEnvio = metodoEnvio === 'express' ? 8.00 : 4.00; // Costo de envío
+                document.querySelector('#shipping-cost').textContent = `S/${costoEnvio.toFixed(2)}`;
+
+                // Calcular total
+                const total = subtotal + impuestos + costoEnvio;
+                document.querySelector('#total').textContent = `S/${total.toFixed(2)}`;
+            }
+
+            // Evento para cambiar la cantidad
+            document.querySelector('.product-quantity').addEventListener('input', calcularTotal);
+
+            // Evento para cambiar el método de envío
+            document.querySelector('#shipping-method').addEventListener('change', calcularTotal);
+
+            // Calcular total inicialmente
+            calcularTotal();
+        }
+
+                    // Evento para el botón "Finalizar Pedido"
+        document.querySelector('#submit-button').addEventListener('click', (event) => {
+        });
+        
+
+
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

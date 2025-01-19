@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platformer Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="start-screen">
+      <h1 class="main-title">Videojuego Plataformero</h1>
+      <p class="instructions">
+        Este es un juego que hice en uno de los cursos de FreecodeCamp...
+        Ayuda al jugador principal a navegar hasta los puntos de control amarillos.
+      </p>
+      <p class="instructions">
+        Utilice las flechas del teclado para mover al jugador.
+      </p>
+      <p class="instructions">También puedes usar la barra espaciadora para saltar.</p>
+
+      <div class="btn-container">
+        <button class="btn" id="start-btn">Start Game</button>
+      </div>
+    </div>
+
+    <div class="checkpoint-screen">
+      <h2>Congrats!</h2>
+      <p>You reached the last checkpoint.</p>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

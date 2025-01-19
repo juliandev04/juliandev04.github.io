@@ -1,0 +1,286 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    max-height: 100vh; 
+    overflow: hidden; 
+}
+
+body {
+    margin: 0;
+    max-height: 100vh;
+}
+h3{
+    font-size: 0.99rem;
+}
+p{
+    font-size: 0.8rem;
+}
+.container {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.products__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px 240px;
+    gap: 8px;
+    margin: 8px 160px;
+}
+.product{
+    background-color: rgb(237, 239, 234);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product__img{
+    width: 100%;
+    height: 140px !important;
+    background-size: 100% 160%; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.product:hover {
+    transform: scale(1.02) translateY(-2px); 
+}
+.product__img:hover {
+    transform: rotate(0.7deg); 
+}
+.img-iphone{background-image: url("./img/iphone.jpg");}
+.img-gorro{background-image: url("./img/gorro.jpg");}
+.img-zapatillas{background-image: url("./img/zapatillas.jpg");}
+.img-audifonos{background-image: url("./img/audifonos.jpg");}
+.img-gorra{background-image: url("./img/gorro3.jpg");}
+.img-playstation{background-image: url("./img/ps55.webp");}
+
+.product__text{
+    align-self: start;
+    padding-left: 5px;
+}
+
+/*EFECTO QUE VI EN INTERNET Y ME GUSTÓ*/
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181717;
+    outline: 3px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+    width: 100%;
+    height: 40px;
+  }
+  
+  .button .text {
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: 400ms;
+  }
+  
+  .button svg path {
+    transition: 400ms;
+  }
+  
+  .button:hover {
+    background-color: transparent;
+  }
+  
+  .button:hover .text {
+    color: #181717;
+  }
+  
+  .button:hover svg path {
+    fill: #181717;
+  }
+
+
+/*EFECTO QUE VI EN INTERNET Y ME GUSTÓ*/
+.bg-6{
+    background-color: #000000;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1.glitch {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: relative;
+    font-size: 70px;
+    padding: 20px;
+    display: inline-block;
+}
+h1.glitch::before,
+h1.glitch::after {
+    padding: 20px;
+    color: white;
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: black;
+    overflow: hidden;
+    top: 0;
+}
+h1.glitch::before {
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation-name: glitch-animation-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse-alternate;
+}
+h1.glitch::after {
+    left: -3px;
+    text-shadow: -2px 0 blue;
+    animation-name: glitch-animation-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse-alternate;
+}
+@keyframes glitch-animation-1 {
+0% {
+    clip: rect(0px, 9999px, 30px, 0px);
+}
+10% {
+    clip: rect(5px, 9999px, 50px, 0px);
+}
+20% {
+    clip: rect(10px, 9999px, 60px, 0px);
+ }
+30% {
+    clip: rect(15px, 9999px, 80px, 0px);
+}
+40% {
+    clip: rect(25px, 9999px, 90px, 0px);
+}
+50% {
+    clip: rect(30px, 9999px, 70px, 0px);
+}
+60% {
+    clip: rect(20px, 9999px, 50px, 0px);
+}
+70% {
+    clip: rect(40px, 9999px, 100px, 0px);
+}
+80% {
+    clip: rect(15px, 9999px, 40px, 0px);
+}
+90% {
+    clip: rect(50px, 9999px, 120px, 0px);
+}
+100% {
+    clip: rect(10px, 9999px, 60px, 0px);
+}
+} 
+@keyframes glitch-animation-2 {
+    0% {
+      clip: rect(0px, 9999px, 40px, 0px);
+    }
+    10% {
+      clip: rect(20px, 9999px, 50px, 0px);
+    }
+    20% {
+      clip: rect(40px, 9999px, 70px, 0px);
+    }
+    30% {
+      clip: rect(30px, 9999px, 80px, 0px);
+    }
+    40% {
+      clip: rect(60px, 9999px, 90px, 0px);
+    }
+    50% {
+      clip: rect(50px, 9999px, 100px, 0px);
+    }
+    60% {
+      clip: rect(40px, 9999px, 120px, 0px);
+    }
+    70% {
+      clip: rect(60px, 9999px, 150px, 0px);
+    }
+    80% {
+      clip: rect(10px, 9999px, 90px, 0px);
+    }
+    90% {
+      clip: rect(20px, 9999px, 110px, 0px);
+    }
+    100% {
+      clip: rect(30px, 9999px, 60px, 0px);
+    }
+}
+  
+@media (max-width: 998px) {
+    h1.glitch {
+        font-size: 50px;
+        padding: 10px;
+    }
+
+    h1.glitch::before,
+    h1.glitch::after {
+        height: 50px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 300px) {
+    h1.glitch {
+        font-size: 20px;
+        padding: 2px;
+    }
+
+    h1.glitch::before,
+    h1.glitch::after {
+        height: 40px; 
+        padding: 10px; 
+    }
+}
+
+/* Media query para pantallas medianas (tabletas o pantallas más pequeñas) */
+@media (max-width: 1024px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width:100vw;
+        height: 100vh; 
+        max-height: 100vh; 
+        overflow:auto;
+        overflow-x: hidden;
+    }
+    
+    .products__container {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 8px 80px;
+    }
+}
+
+@media (max-width: 660px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width:100vw;
+        height: 100vh; 
+        max-height: 100vh; 
+        overflow:auto;
+        overflow-x: hidden;
+    }
+    .products__container {
+        grid-template-columns: 1fr;
+        margin: 8px 20px; 
+    }
+}

@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("fondos/fondogmtres.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2.2rem;
+    font-family: "Homer Simpson UI";
+    text-decoration: underline;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); 
+    user-select: none;
+}
+
+h3{
+    color:#fff;
+    font-size: 1.2rem;
+}
+h2{
+    font-size: 1.6rem;
+}
+span{
+    margin-right:5px;
+    color:#e50000;
+    font-weight: bold;
+}
+.intrucciones__container{
+    text-align: center;
+}
+
+.juego__container{
+    display: flex;
+    margin-top: 20px;
+}
+.palabra__container{
+    display: flex;
+}
+.bloque__palabra{
+    background-color: rgb(111, 185, 0);
+    color:#fff;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    font-size: 4rem;
+    padding-bottom: 9px;
+    user-select: none;
+}
+.letras_container{
+    width:70%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.letra{
+    width: 54px;
+    height: 54px;
+    background-color: gray;
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 5px;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-size: 1.3rem;
+    user-select: none;
+}
+.letra_deshabilitada {
+    background-color: lightgray; 
+    cursor: not-allowed; 
+    pointer-events: none;
+    color: #777; 
+}
+.vidas__container{
+    display: flex;
+}
+
+/*MOBILE----------------------------------------------*/
+@media only screen and (max-width: 1400px)  {
+    .container {
+        margin-top: 70px;
+    }
+    .container::before {
+        height: 120%;
+    }
+}
+@media only screen and (max-width: 1000px)  {
+    .container {
+        margin-top: 70px;
+    }
+    .container::before {
+        height: 126%;
+    }
+}
+
+@media only screen and (max-width: 990px)  {
+    .container {
+        margin-top: 70px;
+    }
+    .container::before {
+        height: 135%;
+    }
+}
+@media only screen and (max-width: 900px)  {
+    .container {
+        margin-top: 70px;
+    }
+    .container::before {
+        height: 145%;
+    }
+}
+@media only screen and (max-width: 800px)  {
+    .container {
+        margin-top: 110px;
+    }
+    .container::before {
+        height: 180%;
+    }
+    .bloque__palabra{
+        background-color: rgb(111, 185, 0);
+        color:#fff;
+        width: 50px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items:end;
+        font-size: 3rem;
+        padding-bottom: 9px;
+    }
+    .intrucciones__container{
+        text-align:left;
+        margin-left: 8px;
+    }
+
+}
