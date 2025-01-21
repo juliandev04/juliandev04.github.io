@@ -102,7 +102,7 @@ document.getElementById("videojuego__project").addEventListener("click", functio
 });
 
 document.getElementById("collage__project").addEventListener("click", function() {
-    window.open("proyecto/index.html", "_blank");
+    window.open("https://juliandev04.github.io/collagePhotos", "_blank");
 });
 
 document.getElementById('submit_button').addEventListener('click', function() {
